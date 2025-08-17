@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/")
 public class PaymentController {
 
-    @GetMapping("/initiate")
+    @PostMapping("/initiate")
     public ResponseEntity<String> initiate(@RequestHeader(value = "PAYMENT-INITIATOR", required = false) String initiator, @RequestBody Map<String, Object> body) {
         if (initiator == null || initiator.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Missing PAYMENT-INITIATOR header");
