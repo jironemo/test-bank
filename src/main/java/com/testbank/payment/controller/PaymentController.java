@@ -23,18 +23,19 @@ public class PaymentController {
         }
 
         //Make a get Request to localhost:8081/ack
-        try {
-            HttpClient.newHttpClient().send(HttpRequest.newBuilder()
-                    .uri(URI.create(body.get("callback").toString()))
-                    .header("PAYMENT-INITIATOR", initiator)
-                    .build(), null);
-                    return ResponseEntity.status(HttpStatus.OK).body("Acknowledgment sent to " + initiator);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return null;
+//        try {
+//            HttpClient.newHttpClient().send(HttpRequest.newBuilder()
+//                    .uri(URI.create(body.get("callback").toString()))
+//                    .header("PAYMENT-INITIATOR", initiator)
+//                    .build(), null);
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+        return ResponseEntity.status(HttpStatus.OK).body("Acknowledgment sent to " + initiator);
     }
 
     @PostMapping("/payment")
