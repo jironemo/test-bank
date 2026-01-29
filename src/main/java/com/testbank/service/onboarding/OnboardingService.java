@@ -1,4 +1,4 @@
-package com.testbank.service.merchant;
+package com.testbank.service.onboarding;
 import com.testbank.dto.OnboardingDto;
 
 public interface OnboardingService{

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.testbank.dto.OnboardingDto;
-import com.testbank.service.merchant.OnboardingService;
+import com.testbank.service.onboarding.OnboardingService;
 import com.testbank.util.JPayResponse;
 
 @RestController
@@ -23,11 +23,7 @@ public class OnboardingController {
     @PostMapping("register")
     public JPayResponse<?> registerUser(@RequestBody OnboardingDto onboardingDto){
         OnboardingDto response = onboardingService.saveUserAndMerchant(onboardingDto);
-        if(response != null){
-            return JPayResponse.ok(response);
-        }else{
-            return JPayResponse.ok("Merchant with the username already exists");
-        }
+        return JPayResponse.ok(response);
     }
 
 }
