@@ -36,6 +36,7 @@ public class OnboardingServiceImpl implements OnboardingService {
             UserAccount created = userAccountService.save(new UserAccount(onboardingDto.getUserAccount()));
             MerchantInformation merchantInformation = new MerchantInformation(onboardingDto.getMerchantInformation());
             merchantInformation.setUserAccount(created);
+            merchantInformation.setQrString(merchantInformation.toQrString());
             merchantInformationService.save(merchantInformation);
 
         }

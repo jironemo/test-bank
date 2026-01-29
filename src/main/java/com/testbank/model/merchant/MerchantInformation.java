@@ -50,7 +50,9 @@ public class MerchantInformation {
     @Column(name = "created_at")
     private String createdAt;
 
-
+    @Column(name = "qr_string", length = 2000)
+    private String qrString;
+    
     @OneToOne(fetch = jakarta.persistence.FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_account_id", nullable = false, unique = true)
     private UserAccount userAccount;
@@ -66,4 +68,12 @@ public class MerchantInformation {
         this.merchantName = merchantInformationDto.getOrgName();
     }
 
+
+    public String toQrString(){
+        return "MERCHANT|" +
+                "NAME:" + this.merchantName + "|" +
+                "CODE:" + this.merchantCode + "|" +
+                "ADDRESS:" + this.merchantAddress + "|" +
+                "ORG:" + this.orgName;
+    }
 }
