@@ -1,6 +1,6 @@
-package com.testbank.payment.service;
+package com.testbank.service.payment;
 
-import com.testbank.payment.model.PaymentInfo;
+import com.testbank.model.PaymentInfo;
 
 public interface PaymentService {
     void processPayment(PaymentInfo paymentInfo);

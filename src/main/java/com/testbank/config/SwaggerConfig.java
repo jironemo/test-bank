@@ -1,5 +1,5 @@
 
-package com.testbank.payment.config;
+package com.testbank.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

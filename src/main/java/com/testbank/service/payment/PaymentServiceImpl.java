@@ -1,7 +1,7 @@
-package com.testbank.payment.service;
+package com.testbank.service.payment;
 
-import com.testbank.payment.model.PaymentInfo;
-import com.testbank.payment.repository.PaymentRepository;
+import com.testbank.model.PaymentInfo;
+import com.testbank.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.testbank.payment.repository;
+package com.testbank.repository;
 
-import com.testbank.payment.model.PaymentInfo;
+import com.testbank.model.PaymentInfo;
 import org.springframework.stereotype.Repository;
 
 @Repository
