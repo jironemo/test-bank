@@ -34,4 +34,8 @@ public class ApiKey {
 
     @Column
     private ApiKeyStatus status;
+
+
+    @Column
+    private String callbackUrl;
 }

@@ -1,4 +1,5 @@
 package com.testbank.config;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -14,7 +15,7 @@ public class MerchantApiKeyCheckConfig implements WebMvcConfigurer {
 
     public void addInterceptors(org.springframework.web.servlet.config.annotation.InterceptorRegistry registry) {
         registry.addInterceptor(merchantInterceptor)
-                .addPathPatterns("/api/merchant/**"); // Apply to merchant-related endpoints
+                .addPathPatterns("/api/merchant/**","/api/transactions/**"); // Apply to merchant-related endpoints
     }
 
 }
