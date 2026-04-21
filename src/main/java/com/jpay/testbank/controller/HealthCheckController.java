@@ -13,6 +13,8 @@ public class HealthCheckController {
     public String healthCheck() {
         return "OK";
     }
-    
-    
+    @PostMapping("")
+    public String healthCheck(){
+	    return "OK";
+    }
 }
